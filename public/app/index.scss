@@ -1,0 +1,25 @@
+// variables
+$pa_blue: #42a0d4;
+$pa_green: #87ca95;
+$pa_grey_btn: #aaa8ad;
+$pa_grey_btn_border: #9f9da3;
+$pa_grey_txt: #98979d;
+
+// expands
+%menu_btn{
+  font-size: 25px;
+}
+
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -1,0 +1,48 @@
+paperless-navbar {
+  #paperless-navbar-collapse {
+    .nav.navbar-nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      li {
+        padding: 0;
+        >span {
+          @extend %menu_btn;
+          font-size: 17px;
+          color: $pa_grey_txt;
+          position: absolute;
+          left: 0;
+          top: -20px;
+        }
+        &.btn:first-child {
+          margin-right: 35px;
+        }
+        &.btn a {
+          @extend %menu_btn;
+          background-color: $pa_grey_btn;
+          color: white;
+          padding: 20px 60px;
+          border-radius: 0;
+        }
+        &.tab {
+          cursor: pointer;
+          a {
+            @extend %menu_btn;
+          }
+          &.active a{
+            border-bottom: 2px $pa_grey_txt solid;
+            cursor: default;
+            background-color: transparent;
+          }
+        }
+        &.logo {
+          width: calc(100% - 910px);
+          text-align: center;
+          img{
+          	cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
