@@ -1,45 +1,206 @@
 paperless-navbar {
-  #paperless-navbar-collapse {
-    .nav.navbar-nav {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      li {
-        padding: 0;
-        >span {
-          @extend %menu_btn;
-          font-size: 17px;
-          color: $pa_grey_txt;
-          position: absolute;
-          left: 0;
-          top: -20px;
+  .navbar.navbar-default {
+    margin-bottom: 0;
+    .navbar-header {
+      >li {
+        text-align: center;
+        img {
+          width: 200px;
         }
-        &.btn:first-child {
-          margin-right: 35px;
-        }
-        &.btn a {
-          @extend %menu_btn;
-          background-color: $pa_grey_btn;
-          color: white;
-          padding: 20px 60px;
-          border-radius: 0;
-        }
-        &.tab {
-          cursor: pointer;
-          a {
+      }
+      button {
+        position: absolute;
+        right: -2px;
+        top: 9px;
+      }
+    }
+    #paperless-navbar-collapse {
+      padding-bottom: 60px;
+      margin-bottom: 0;
+      padding-top: 10px;
+      .nav.navbar-nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        li {
+          padding: 0;
+          >span {
             @extend %menu_btn;
+            font-size: 17px;
+            color: $pa_grey_txt;
+            position: absolute;
+            left: 0;
+            top: -40px;
           }
-          &.active a{
-            border-bottom: 2px $pa_grey_txt solid;
-            cursor: default;
-            background-color: transparent;
+          &.btn:first-child {
+            margin-right: 35px;
+          }
+          &.btn a {
+            @extend %menu_btn;
+            background-color: $pa_grey_btn;
+            color: white;
+            padding: 20px 60px;
+            border-radius: 0;
+          }
+          &.tab {
+            cursor: pointer;
+            a {
+              @extend %menu_btn;
+            }
+            &.active a {
+              border-bottom: 2px $pa_grey_txt solid;
+              cursor: default;
+              background-color: transparent;
+            }
+          }
+          &.logo {
+            width: calc(100% - 910px);
+            text-align: center;
+            img {
+              cursor: pointer;
+              max-width: 435px;
+            }
           }
         }
-        &.logo {
-          width: calc(100% - 910px);
-          text-align: center;
-          img{
-          	cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  paperless-navbar {
+    .navbar.navbar-default {
+      #paperless-navbar-collapse {
+        padding-bottom: 40px;
+        .nav.navbar-nav {
+          li {
+            >span {
+              font-size: 15px;
+            }
+            &.btn:first-child {}
+            &.btn a {
+              padding: 15px 45px;
+            }
+            &.tab {
+              a {}
+              &.active a {}
+            }
+            &.logo {
+              width: calc(100% - 730px);
+              img {
+                max-width: 350px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  paperless-navbar {
+    .navbar.navbar-default {
+      #paperless-navbar-collapse {
+        padding-bottom: 40px;
+        .nav.navbar-nav {
+          li {
+            >span {
+              font-size: 15px;
+              top: -25px;
+            }
+            &.btn:first-child {}
+            &.btn a {
+              padding: 10px 35px;
+            }
+            &.tab {
+              a {}
+              &.active a {}
+            }
+            &.logo {
+              width: calc(100% - 620px);
+              img {
+                max-width: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  paperless-navbar {
+    .navbar.navbar-default {
+      #paperless-navbar-collapse {
+        padding-bottom: 40px;
+        .nav.navbar-nav {
+          li {
+            >span {
+              font-size: 15px;
+              top: -25px;
+            }
+            &.btn:first-child {
+              margin-right: 20px;
+            }
+            &.btn a {
+              padding: 7px 30px;
+            }
+            &.tab {
+              width: 90px;
+              a {
+                padding: 10px;
+              }
+              &.active a {}
+            }
+            &.logo {
+              width: calc(100% - 495px);
+              img {
+                max-width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}@media only screen and (max-width: 768px) {
+  paperless-navbar {
+    .navbar.navbar-default {
+      .navbar-header {
+        >li {
+          margin-bottom: 30px;
+        }
+      }
+      #paperless-navbar-collapse {
+        padding-bottom: 10px;
+        .nav.navbar-nav {
+          display: block;
+          li {
+            >span {
+              font-size: 15px;
+              top: -25px;
+            }
+            &.btn:first-child {
+              margin-right: 20px;
+            }
+            &.btn a {
+              padding: 7px 30px;
+            }
+            &.tab {
+              width: 90px;
+              a {
+                padding: 10px;
+              }
+              &.active a {}
+            }
+            &.logo {
+              width: calc(100% - 470px);
+              img {
+                max-width: 200px;
+              }
+            }
           }
         }
       }

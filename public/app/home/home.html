@@ -1,34 +1,133 @@
-<div layout="vertical" layout-fill>
-
-  <md-content>
-    <header>
-      <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
-
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-      </p>
-    </section>
-
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
+<div id="home">
+  <div class="login isM">
+    <div><span><div class="title">LOGIN:</div><a class="btn bmd-ripple">OFFICE</a></span></div>
+    <div><span><a class="btn bmd-ripple">CLIENT</a></span></div>
+  </div>
+  <div class="sec-1">
+    <h2>connect with your clients the paperless way</h2>
+  </div>
+  <div class="sec-2">
+    <div class="each">
+      <div class="head row">
+        <h2 class="pull-left">smart forms</h2>
+        <div class="line pull-right isP"></div>
+      </div>
+      <div class="body row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 img">
+          <img src="./assets/home/ico-1.png">
         </div>
-      </md-card>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 txt">
+          <p>Highlighted answers, answers can determine the next question. Saves space and time. Ability to text or email out forms. Clients can do signature with their finger. Any consent form can go into any system.</p>
+        </div>
+      </div>
     </div>
-  </md-content>
-
+    <div class="each">
+      <div class="head row">
+        <h2 class="pull-right">build your own</h2>
+        <div class="line pull-left isP"></div>
+      </div>
+      <div class="body row">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 img isM">
+          <img ng-src="{{home.icon[0]}}">
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 txt pull-left">
+          <p>Paperless Connection is completely customizable to your preferences. It can be as complex or simple as you like. You can have them built for you. Our product works instantly and is easy to operate.</p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 img isP">
+          <img ng-src="{{home.icon[1]}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sec-3">
+    <div class="row head isP">
+      <h2 class="pull-right">why choose us?</h2>
+      <div class="line pull-left"></div>
+    </div>
+    <div class="body row">
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="img">
+          <img ng-src="{{home.icon[2]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>Any Device, Anywhere</h3>
+          </div>
+          <div class="txt">
+            <p>No need for special devices. Our product allows any client to fill out his or her information from their very own electronic device.</p>
+          </div>
+        </div>
+      </div>
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12 even">
+        <div class="img">
+          <img ng-src="{{home.icon[3]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>Push/Pull System</h3>
+          </div>
+          <div class="txt">
+            <p>our databases are designed to store any information without the need to update unless required. Clients can view and confirm their information without needing to re-input.</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-sm"></div>
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="img">
+          <img ng-src="{{home.icon[4]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>No Hidden Costs</h3>
+          </div>
+          <div class="txt">
+            <p>At Paperless Connection we don't change by the user, the tablet, or the number of submissions. We offer a flat rate, no hassle fee.</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-lg visible-md"></div>
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12 even">
+        <div class="img">
+          <img ng-src="{{home.icon[5]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>HIPPA compliant</h3>
+          </div>
+          <div class="txt">
+            <p>This web app is HIPPA Compliant and ensures safety of your clients information with the efficiency your bussiness needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-sm"></div>
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="img">
+          <img ng-src="{{home.icon[6]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>Practitioner Connect</h3>
+          </div>
+          <div class="txt">
+            <p>Our unique system allows practitioners to connect with each other to view medical histories and needs on patients. Cuts down time on phone calls, emails, letters between doctors.</p>
+          </div>
+        </div>
+      </div>
+      <div class="each col-lg-4 col-md-4 col-sm-6 col-xs-12 even">
+        <div class="img">
+          <img ng-src="{{home.icon[7]}}">
+        </div>
+        <div class="t-body">
+          <div class="title">
+            <h3>Client Profile</h3>
+          </div>
+          <div class="txt">
+            <p>Each client has their own profile that includes all documents, consents, medical historis. Ability to make notes for correspondents, medication. Cloud based system.</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix visible-sm"></div>
+      <div class="clearfix visible-lg visible-md"></div>
+    </div>
+  </div>
 </div>

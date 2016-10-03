@@ -1,25 +1,134 @@
-// variables
-$pa_blue: #42a0d4;
-$pa_green: #87ca95;
-$pa_grey_btn: #aaa8ad;
-$pa_grey_btn_border: #9f9da3;
-$pa_grey_txt: #98979d;
-
-// expands
-%menu_btn{
-  font-size: 25px;
-}
-
-/**
+/*
  *  Do not remove the comment below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
  */
+
 // bower:scss
 // endbower
+$pa_blue: #42a0d4;
+$pa_green: #87ca95;
+$pa_grey: #aaa8ad;
+$pa_grey_btn: #aaa8ad;
+$pa_grey_btn_border: #9f9da3;
+$pa_grey_txt: #98979d;
+$footer_bg: #242021;
+$form_bg: #a1cfe9;
+$form_border: #2291ca;
+// expands
+%menu_btn {
+  font-size: 25px;
+}
+%menu_mo_btn {
+  font-size: 25px;
+}
 
-/**
+%footer_txt {
+  font-size: 25px;
+}
+
+%title_txt {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+%home_txt {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+%home_each_title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+%home_each_txt {
+  font-size: 18px;
+  font-weight: bold;
+}
+%con_title{
+	font-size: 32px;
+}
+%con_txt{
+	font-size: 27px;
+}
+%form_txt{
+	font-size: 20px;
+}
+.isM {
+  display: none!important;
+}
+
+.isP {
+  display: block!important;
+}
+
+@media only screen and (max-width: 1500px) {
+  %menu_btn,
+  %footer_txt {
+    font-size: 20px;
+  }
+  %title_txt {
+    font-size: 55px;
+  }
+  %home_txt {
+    font-size: 25px;
+  }
+  %home_each_title {
+    font-size: 30px;
+  }
+  %home_each_txt {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  %menu_btn,
+  %footer_txt {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  %title_txt {
+    font-size: 50px;
+  }
+  %home_txt {
+    font-size: 25px;
+  }
+  %home_each_title {
+    font-size: 30px;
+  }
+  %home_each_txt {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  %menu_btn,
+  %footer_txt {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .isM {
+    display: block!important;
+  }
+  .isP {
+    display: none!important;
+  }
+}
+
+
+/*
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
  */
+
 // injector
 // endinjector
+// variables
+
+body{
+	overflow-x: hidden;
+}

@@ -1,17 +1,25 @@
-.acme-navbar-text{
-  color: white;
+footer {
+  height: 320px;
+  background-color: $footer_bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 10%;
+  p {
+    color: white;
+    @extend %footer_txt;
+  }
 }
 
-a {
-  color: black;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0;
-  line-height: 1.25em;
-}
-
-a:hover, a:focus {
-  color: greenyellow;
+@media only screen and (max-width: 992px) {
+  footer {
+    height: 220px;
+    .isM {
+      display: block!important;
+    }
+    .isP {
+      display: none!important;
+    }
+  }
 }

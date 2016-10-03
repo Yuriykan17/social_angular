@@ -1,17 +1,186 @@
-.acme-navbar-text{
-  color: white;
+#contact {
+  padding: 75px;
+  .form {
+    padding: 0;
+    .bmd-field-group {
+      position: relative;
+      margin-top: 50px;
+      .title {
+        position: absolute;
+        left: 0;
+        top: -25px;
+        text-transform: uppercase;
+        @extend %form_txt;
+        color: #949497;
+      }
+      input,
+      textarea {
+        background-color: $form_bg;
+        border: 2px $form_border solid;
+        line-height: 45px;
+        @extend %form_txt;
+        padding: 5px;
+        padding-left: 10px;
+      }
+      textarea {
+        height: 360px;
+      }
+    }
+    .submit {
+      float: right;
+      margin-top: 15px;
+      >a {
+        color: #2c95d1;
+        background-color: transparent;
+        font-size: 30px;
+        &:hover {
+          box-shadow: none;
+          color: #057aff;
+          background-color: rgba(44, 149, 209, 0.08)
+        }
+      }
+    }
+  }
+  .t-body {
+    float: right;
+    text-align: center;
+    h3 {
+      @extend %con_title;
+      margin-bottom: 35px;
+    }
+    p {
+      @extend %con_txt;
+    }
+  }
 }
 
-a {
-  color: black;
+@media only screen and (max-width: 1024px) {
+  #contact {
+    padding: 55px 40px;
+    .form {
+      margin-right: -15px;
+      .bmd-field-group {
+        margin-top: 50px;
+        .title {
+          position: absolute;
+          left: 0;
+          top: -25px;
+        }
+        input,
+        textarea {
+          line-height: 45px;
+          padding: 5px;
+          padding-left: 10px;
+        }
+        textarea {
+          height: 360px;
+        }
+      }
+      .submit {
+        margin-top: 15px;
+        >a {
+          font-size: 30px;
+          &:hover {}
+        }
+      }
+    }
+    .t-body {
+      h3 {
+        margin-bottom: 35px;
+      }
+      p {}
+    }
+  }
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0;
-  line-height: 1.25em;
+@media only screen and (max-width: 768px) {
+  #contact {
+    padding: 0px 40px;
+    padding-bottom: 45px;
+    .form {
+      margin-right: -15px;
+      .bmd-field-group {
+        margin-top: 50px;
+        .title {
+          position: absolute;
+          left: 0;
+          top: -25px;
+        }
+        &.small {
+          max-width: 350px;
+        }
+        input,
+        textarea {
+          line-height: 45px;
+          padding: 5px;
+          padding-left: 10px;
+        }
+        textarea {
+          height: 360px;
+        }
+      }
+      .submit {
+        float: right;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        >a {
+          font-size: 30px;
+          &:hover {}
+        }
+      }
+    }
+    .t-body {
+      float: left;
+      width: 100vw;
+      margin-left: -20px;
+      background-color: $pa_grey;
+      color: white;
+      padding: 25px 30px;
+      h3 {
+        margin-bottom: 35px;
+      }
+      p {}
+    }
+  }
 }
 
-a:hover, a:focus {
-  color: greenyellow;
+@media only screen and (max-width: 480px) {
+  #contact {
+    padding: 0px 20px;
+    .form {
+      .bmd-field-group {
+        margin-top: 50px;
+        .title {
+          position: absolute;
+          left: 0;
+          top: -25px;
+        }
+        &.small {
+          max-width: 250px;
+        }
+        input,
+        textarea {
+          line-height: 45px;
+          padding: 5px;
+          padding-left: 10px;
+        }
+        textarea {
+          height: 360px;
+        }
+      }
+      .submit {
+        >a {
+          font-size: 30px;
+          &:hover {}
+        }
+      }
+    }
+    .t-body {
+      padding: 25px 30px;
+      h3 {
+        margin-bottom: 35px;
+      }
+      p {}
+    }
+  }
 }
